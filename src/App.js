@@ -1,22 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [title, setTitle] = useState("Default Title");
+
+  useEffect(() => {
+    document.title = process.env.REACT_APP_TITLE;
+  }, [title]);
+
+  const changeTitle = (event) => {
+    setTitle(process.env.REACT_APP_TITLE);
+  };
+  
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>{process.env.REACT_APP_TITLE}</h1>
       </header>
     </div>
   );
