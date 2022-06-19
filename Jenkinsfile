@@ -5,7 +5,7 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/main']],
-                    extensions: [[$class: 'CleanCheckout']], // dọn dẹp workspace sau mỗi lần checkout
+                    extensions: [[$class: 'CleanCheckout']], // clean workspace after checkout
                     userRemoteConfigs: [[url: 'https://github.com/tranvannhan1911/reactjs-multiple-environment.git']]])
             }
         }
