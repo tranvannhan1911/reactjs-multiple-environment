@@ -8,10 +8,6 @@ function App() {
   useEffect(() => {
     document.title = process.env.REACT_APP_TITLE;
   }, [title]);
-
-  const changeTitle = (event) => {
-    setTitle(process.env.REACT_APP_TITLE);
-  };
   
   return (
     <div className="App">
