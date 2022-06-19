@@ -42,10 +42,11 @@
         "scripts": {
         	...
         	"start:dev": "env-cmd -f .env.dev npm start",
-        	"start:prod": "env-cmd -f .env.prod npm start",
-        	"build:prod": "env-cmd -f .env.prod npm run build",
-        	"build:qa": "env-cmd -f .env.qa npm run build",
-        	"build:staging": "env-cmd -f .env.staging npm run build",
+            "start:prod": "env-cmd -f .env.prod npm start",
+            "build:dev": "env-cmd -f .env.dev npm run build",
+            "build:prod": "env-cmd -f .env.prod npm run build",
+            "build:qa": "env-cmd -f .env.qa npm run build",
+            "build:staging": "env-cmd -f .env.staging npm run build",
         	...
         }
         ```
